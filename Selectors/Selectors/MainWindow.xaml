@@ -1,0 +1,34 @@
+﻿<Window x:Class="Selectors.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Selectors"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel>
+            <ListBox>
+                <TextBlock Text="First" />
+                <TextBlock Text="Second" />
+                <TextBlock Text="Thirt" />
+            </ListBox>
+            <TreeView>
+                <TreeViewItem >
+                    <TreeViewItem.Header>
+                        <TextBlock>Tree</TextBlock>
+                    </TreeViewItem.Header>
+                    <TreeViewItem >
+                        <TextBlock Text="text1"/>
+                        <TextBlock Text="text2"/>
+                    </TreeViewItem>
+                    <TreeViewItem>
+                        <TreeViewItem>
+                            <TextBlock Text="text1"/>
+                        </TreeViewItem>
+                    </TreeViewItem>
+                </TreeViewItem >
+            </TreeView>
+        </StackPanel>
+    </Grid>
+</Window>
