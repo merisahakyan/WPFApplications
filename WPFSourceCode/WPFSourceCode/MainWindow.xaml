@@ -1,0 +1,34 @@
+﻿<Window x:Class="WPFSourceCode.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFSourceCode"
+        mc:Ignorable="d"
+        Title="GetSourceCode" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="sourcetextbox"
+            Grid.Column="1"
+            Margin="5 5 5 5"
+
+                TextWrapping="Wrap" 
+                 VerticalContentAlignment="Stretch"
+                 VerticalScrollBarVisibility="Auto"
+                 
+            />
+        <StackPanel Grid.Column="0">
+            <TextBox x:Name="urltextbox"
+            Height="30"
+            Margin="5 5 0 5"
+            />
+            <Button x:Name="getbutton"
+                Height="30" Margin="5 5 0 0" Content="GetSource" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
