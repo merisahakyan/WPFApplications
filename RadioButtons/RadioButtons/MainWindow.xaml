@@ -1,0 +1,27 @@
+﻿<Window x:Class="RadioButtons.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RadioButtons"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel Orientation="Horizontal" Margin="0 0 380 240">
+            <GroupBox Header="Choose">
+                <StackPanel >
+                    <RadioButton Content="Yes" IsChecked="True" GroupName="a"/>
+                    <RadioButton Content="No" GroupName="a"/>
+                    <RadioButton Content="Esim e" GroupName="a"/>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Choose">
+                <StackPanel >
+                    <RadioButton Content="Yes" GroupName="a"/>
+                    <RadioButton Content="No" GroupName="a"/>
+                    <RadioButton Content="Esim e" GroupName="a"/>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</Window>
