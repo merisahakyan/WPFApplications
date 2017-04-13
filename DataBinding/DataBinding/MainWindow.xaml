@@ -7,10 +7,35 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <StackPanel>
-            <TextBox Text="{Binding Firstname,UpdateSourceTrigger=PropertyChanged}" Width="100" />
-            <TextBox Text="{Binding Lastname,UpdateSourceTrigger=PropertyChanged}" Width="100"/>
-            <Button Content="Show" Click="Button_Click" Width="50"/>
-        </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Slider Grid.Row="0" Name="fsize"
+                Minimum="1" Maximum="45" Value="23" Margin="0 10 0 0" 
+                IsSnapToTickEnabled="True" TickPlacement="TopLeft"
+                TickFrequency="1"
+                >
+
+        </Slider>
+        <TextBox Name="MyText" Grid.Row="1" Margin="0 10 0 0">
+            Your Text
+        </TextBox>
+        <ListBox Grid.Row="2" Margin="0 10 0 0" Name="Colors">
+            <ListBoxItem Tag="Red">Red</ListBoxItem>
+            <ListBoxItem Tag="Blue">Blue</ListBoxItem>
+            <ListBoxItem Tag="Black">Black</ListBoxItem>
+            <ListBoxItem Tag="Green">Green</ListBoxItem>
+            <ListBoxItem Tag="Yellow">Yellow</ListBoxItem>
+        </ListBox>
+        <TextBlock Grid.Row="3" Margin="2"
+                   Text="{Binding ElementName=MyText,Path=Text}"
+                   FontSize="{Binding ElementName=fsize,Path=Value}"
+                   Foreground="{Binding ElementName=Colors,Path=SelectedItem.Tag}">
+            
+        </TextBlock>
     </Grid>
 </Window>

@@ -20,16 +20,11 @@ namespace DataBinding
     /// </summary>
     public partial class MainWindow : Window
     {
-        User user = new User { Firstname = "Meri", Lastname = "Sahakyan" };
+
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = user;
-        }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show($"{user.Firstname}   {user.Lastname}");
         }
     }
 }
