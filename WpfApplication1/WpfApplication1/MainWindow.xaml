@@ -6,6 +6,13 @@
         xmlns:local="clr-namespace:WpfApplication1"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <local:Person x:Key="Person"
+                      firstname="Meri"
+                      lastname="Sahakyan">
+            
+        </local:Person>
+    </Window.Resources>
     <Grid>
 
 
@@ -26,6 +33,12 @@
                />
             <Button
                 Content="Send" Click="Button_Click"/>
+            <TextBlock >
+            <Run Text="{Binding Source={StaticResource Person},Path=firstname}"/>
+            <Run Text="    "/>
+            <Run Text="{Binding Source={StaticResource Person},Path=lastname}"/>
+
+            </TextBlock>
 
         </StackPanel>
         <Button
@@ -42,7 +55,12 @@
             Click!
 
         </Button>
-        
+        <TextBlock >
+            <Run Text="{Binding Source={StaticResource Person},Path=firstname}"/>
+            <Run Text="    "/>
+            <Run Text="{Binding Source={StaticResource Person},Path=lasttname}"/>
+
+        </TextBlock> 
         
     </Grid>
 </Window>

@@ -23,6 +23,7 @@ namespace WpfApplication1
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -30,5 +31,11 @@ namespace WpfApplication1
             block.Text = "Hi dear "+name.Text+"!";
             name.Text = "";
         }
+        
+    }
+    public class Person
+    {
+        public string firstname { get; set; }
+        public string lastname { get; set; }
     }
 }
